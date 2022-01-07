@@ -33,7 +33,7 @@ class TransformerEncoder(nn.Module):
 
         self.layers = nn.ModuleList([])
         for layer in range(layers):
-            new_layer = TransformerEncoderLayer(embed_dim,
+            new_layer = TransformerEncoderLayer_WithAoA(embed_dim,
                                                 num_heads=num_heads,
                                                 attn_dropout=attn_dropout,
                                                 relu_dropout=relu_dropout,
@@ -96,7 +96,7 @@ class TransformerEncoder(nn.Module):
         return min(self.max_source_positions, self.embed_positions.max_positions())
 
 
-class TransformerEncoderLayer(nn.Module):
+class TransformerEncoderLayer_WithAoA(nn.Module):
     """Encoder layer block.
     In the original paper each operation (multi-head attention or FFN) is
     postprocessed with: `dropout -> add residual -> layernorm`. In the
@@ -155,11 +155,14 @@ class TransformerEncoderLayer(nn.Module):
         x = self.maybe_layer_norm(0, x, after=True)
 
         residual = x
+        #此时这里加入AOA机制  用来进一步过滤掉不相关的信息。
+
         x = self.maybe_layer_norm(1, x, before=True)
         x = F.relu(self.fc1(x))
         x = F.dropout(x, p=self.relu_dropout, training=self.training)
         x = self.fc2(x)
         x = F.dropout(x, p=self.res_dropout, training=self.training)
+
         x = residual + x
         x = self.maybe_layer_norm(1, x, after=True)
         return x

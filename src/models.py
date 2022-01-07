@@ -41,8 +41,13 @@ class MULTModel(nn.Module):
         self.proj_l = nn.Conv1d(self.orig_d_l, self.d_l, kernel_size=1, padding=0, bias=False)
         self.proj_a = nn.Conv1d(self.orig_d_a, self.d_a, kernel_size=1, padding=0, bias=False)
         self.proj_v = nn.Conv1d(self.orig_d_v, self.d_v, kernel_size=1, padding=0, bias=False)
+        
+        # 2. Transformer_with_self
+        self.transformer_with_self_text = self.get_network(self_type='l', layers=3)
+        self.transformer_with_self_vision = self.get_network(self_type='v', layers=3)
+        self.transformer_with_self_audio = self.get_network(self_type='a', layers=3)
 
-        # 2. Crossmodal Attentions
+        # 3. Crossmodal Attentions
         if self.lonly:
             self.trans_l_with_a = self.get_network(self_type='la')
             self.trans_l_with_v = self.get_network(self_type='lv')
@@ -53,7 +58,7 @@ class MULTModel(nn.Module):
             self.trans_v_with_l = self.get_network(self_type='vl')
             self.trans_v_with_a = self.get_network(self_type='va')
         
-        # 3. Self Attentions (Could be replaced by LSTMs, GRUs, etc.)
+        # 4. Self Attentions (Could be replaced by LSTMs, GRUs, etc.)
         #    [e.g., self.trans_x_mem = nn.LSTM(self.d_x, self.d_x, 1)
         self.trans_l_mem = self.get_network(self_type='l_mem', layers=3)
         self.trans_a_mem = self.get_network(self_type='a_mem', layers=3)
