@@ -1,7 +1,7 @@
 '''
 Author: your name
 Date: 2022-01-07 18:32:31
-LastEditTime: 2022-01-07 18:56:22
+LastEditTime: 2022-01-07 19:12:43
 LastEditors: Please set LastEditors
 Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 FilePath: /my_code/Multimodal-Transformer/src/dataset.py
@@ -25,7 +25,7 @@ else:
 
 
 class Multimodal_Datasets(Dataset):
-    def __init__(self, dataset_path, data='mosei_senti', split_type='train', if_align=False, bert_transformer = 0):
+    def __init__(self, dataset_path, data='mosei_senti', split_type='train', if_align=False, bert_transformer=0):
         super(Multimodal_Datasets, self).__init__()
         dataset_path = os.path.join(dataset_path, data+'_data.pkl' if if_align else data+'_data_noalign.pkl' )
         dataset = pickle.load(open(dataset_path, 'rb'))
@@ -36,8 +36,12 @@ class Multimodal_Datasets(Dataset):
         self.audio = dataset[split_type]['audio'].astype(np.float32)
         self.audio[self.audio == -np.inf] = 0
         self.audio = torch.tensor(self.audio).cpu().detach()
-        self.labels = torch.tensor(dataset[split_type]['labels'].astype(np.float32)).cpu().detach()
         self.bert_transformer = bert_transformer
+
+        if self.bert_transformer == 1:
+            self.labels = torch.tensor(dataset[split_type]['regression_labels'].astype(np.float32)).cpu().detach()
+        else:
+            self.labels = torch.tensor(dataset[split_type]['labels'].astype(np.float32)).cpu().detach()
         # Note: this is STILL an numpy array
         self.meta = dataset[split_type]['id'] if 'id' in dataset[split_type].keys() else None
        
