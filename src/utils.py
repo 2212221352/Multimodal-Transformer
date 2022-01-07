@@ -1,3 +1,11 @@
+'''
+Author: your name
+Date: 2022-01-07 18:33:20
+LastEditTime: 2022-01-07 18:39:41
+LastEditors: Please set LastEditors
+Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+FilePath: /my_code/Multimodal-Transformer/src/utils.py
+'''
 import torch
 import os
 from src.dataset import Multimodal_Datasets
@@ -8,7 +16,7 @@ def get_data(args, dataset, split='train'):
     data_path = os.path.join(args.data_path, dataset) + f'_{split}_{alignment}.dt'
     if not os.path.exists(data_path):
         print(f"  - Creating new {split} data")
-        data = Multimodal_Datasets(args.data_path, dataset, split, args.aligned)
+        data = Multimodal_Datasets(args.data_path, dataset, split, args.aligned,args.flag)
         torch.save(data, data_path)
     else:
         print(f"  - Found cached {split} data")

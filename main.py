@@ -23,8 +23,13 @@ parser.add_argument('--aligned', action='store_true',
                     help='consider aligned experiment or not (default: False)')
 parser.add_argument('--dataset', type=str, default='mosi',
                     help='dataset to use (default: mosei_senti)')
-parser.add_argument('--data_path', type=str, default='/home/pc/aibot/BAS/data/multimodal/data_transformer/',
+parser.add_argument('--data_path', type=str, default='/home/pc/aibot/BAS/data/multimodal/data_bert/mosi',
                     help='path for storing the dataset')
+
+parser.add_argument('--flag', type=int, default=1,
+                    help='0 transformer, 1 bert')
+
+
 
 # Dropouts
 parser.add_argument('--attn_dropout', type=float, default=0.1,

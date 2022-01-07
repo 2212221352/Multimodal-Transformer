@@ -1,3 +1,11 @@
+'''
+Author: your name
+Date: 2022-01-07 18:32:31
+LastEditTime: 2022-01-07 18:56:22
+LastEditors: Please set LastEditors
+Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+FilePath: /my_code/Multimodal-Transformer/src/dataset.py
+'''
 import numpy as np
 from torch.utils.data.dataset import Dataset
 import pickle
@@ -17,11 +25,11 @@ else:
 
 
 class Multimodal_Datasets(Dataset):
-    def __init__(self, dataset_path, data='mosei_senti', split_type='train', if_align=False):
+    def __init__(self, dataset_path, data='mosei_senti', split_type='train', if_align=False, bert_transformer = 0):
         super(Multimodal_Datasets, self).__init__()
         dataset_path = os.path.join(dataset_path, data+'_data.pkl' if if_align else data+'_data_noalign.pkl' )
         dataset = pickle.load(open(dataset_path, 'rb'))
-
+        
         # These are torch tensors
         self.vision = torch.tensor(dataset[split_type]['vision'].astype(np.float32)).cpu().detach()
         self.text = torch.tensor(dataset[split_type]['text'].astype(np.float32)).cpu().detach()
@@ -29,7 +37,7 @@ class Multimodal_Datasets(Dataset):
         self.audio[self.audio == -np.inf] = 0
         self.audio = torch.tensor(self.audio).cpu().detach()
         self.labels = torch.tensor(dataset[split_type]['labels'].astype(np.float32)).cpu().detach()
-        
+        self.bert_transformer = bert_transformer
         # Note: this is STILL an numpy array
         self.meta = dataset[split_type]['id'] if 'id' in dataset[split_type].keys() else None
        
@@ -51,8 +59,11 @@ class Multimodal_Datasets(Dataset):
         X = (index, self.text[index], self.audio[index], self.vision[index])
         Y = self.labels[index]
         META = (0,0,0) if self.meta is None else (self.meta[index][0], self.meta[index][1], self.meta[index][2])
-        if self.data == 'mosi':
-            META = (self.meta[index][0].decode('UTF-8'), self.meta[index][1].decode('UTF-8'), self.meta[index][2].decode('UTF-8'))
+        if self.data == 'mosi':    
+            if self.bert_transformer == 0:
+                META = (self.meta[index][0].decode('UTF-8'), self.meta[index][1].decode('UTF-8'), self.meta[index][2].decode('UTF-8'))
+        else:
+            META = (0,0,0)
         if self.data == 'iemocap':
             Y = torch.argmax(Y, dim=-1)
         return X, Y, META        
