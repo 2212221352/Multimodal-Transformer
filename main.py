@@ -21,9 +21,9 @@ parser.add_argument('--lonly', action='store_true',
                     help='use the crossmodal fusion into l (default: False)')
 parser.add_argument('--aligned', action='store_true',
                     help='consider aligned experiment or not (default: False)')
-parser.add_argument('--dataset', type=str, default='mosei_senti',
+parser.add_argument('--dataset', type=str, default='mosi',
                     help='dataset to use (default: mosei_senti)')
-parser.add_argument('--data_path', type=str, default='data',
+parser.add_argument('--data_path', type=str, default='/home/pc/aibot/BAS/data/multimodal/data_transformer/',
                     help='path for storing the dataset')
 
 # Dropouts
@@ -119,9 +119,9 @@ train_data = get_data(args, dataset, 'train')
 valid_data = get_data(args, dataset, 'valid')
 test_data = get_data(args, dataset, 'test')
    
-train_loader = DataLoader(train_data, batch_size=args.batch_size, shuffle=True)
-valid_loader = DataLoader(valid_data, batch_size=args.batch_size, shuffle=True)
-test_loader = DataLoader(test_data, batch_size=args.batch_size, shuffle=True)
+train_loader = DataLoader(train_data, batch_size=args.batch_size, shuffle=True,generator=torch.Generator(device='cuda'))
+valid_loader = DataLoader(valid_data, batch_size=args.batch_size, shuffle=True,generator=torch.Generator(device='cuda'))
+test_loader = DataLoader(test_data, batch_size=args.batch_size, shuffle=True,generator=torch.Generator(device='cuda'))
 
 print('Finish loading the data....')
 if not args.aligned:
