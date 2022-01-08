@@ -39,13 +39,14 @@ class MULTModel(nn.Module):
         output_dim = hyp_params.output_dim        # This is actually not a hyperparameter :-)
 
         # 1. Temporal convolutional layers
-        self.proj_l = nn.Conv1d(self.orig_d_l, self.d_l, kernel_size=1, padding=0, bias=False)
-        self.proj_a = nn.Conv1d(self.orig_d_a, self.d_a, kernel_size=1, padding=0, bias=False)
-        self.proj_v = nn.Conv1d(self.orig_d_v, self.d_v, kernel_size=1, padding=0, bias=False)
+        self.proj_l = nn.Conv1d(self.orig_d_l, self.d_l, kernel_size=3, padding=0, bias=False)
+        self.proj_a = nn.Conv1d(self.orig_d_a, self.d_a, kernel_size=3, padding=0, bias=False)
+        self.proj_v = nn.Conv1d(self.orig_d_v, self.d_v, kernel_size=3, padding=0, bias=False)
         
         # 2. Transformer_with_self
-        self.transformer_with_self_text = self.get_network(self_type='l', layers=3)
         self.transformer_with_self_vision = self.get_network(self_type='v', layers=3)
+        self.transformer_with_self_text = self.get_network(self_type='l', layers=3)
+        
         self.transformer_with_self_audio = self.get_network(self_type='a', layers=3)
 
         # 3. Crossmodal Attentions
@@ -64,6 +65,8 @@ class MULTModel(nn.Module):
         self.trans_l_mem = self.get_network(self_type='l_mem', layers=3)
         self.trans_a_mem = self.get_network(self_type='a_mem', layers=3)
         self.trans_v_mem = self.get_network(self_type='v_mem', layers=3)
+        
+        
        
         # Projection layers
         self.proj1 = nn.Linear(combined_dim, combined_dim)

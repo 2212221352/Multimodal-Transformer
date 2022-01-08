@@ -48,15 +48,15 @@ parser.add_argument('--out_dropout', type=float, default=0.0,
                     help='output layer dropout')
 
 # Architecture
-parser.add_argument('--nlevels', type=int, default=6,
+parser.add_argument('--nlevels', type=int, default=4,
                     help='number of layers in the network (default: 5)')
-parser.add_argument('--num_heads', type=int, default=5,
+parser.add_argument('--num_heads', type=int, default=8,
                     help='number of heads for the transformer network (default: 5)')
 parser.add_argument('--attn_mask', action='store_false',
                     help='use attention mask for Transformer (default: true)')
 
 # Tuning
-parser.add_argument('--batch_size', type=int, default=24, metavar='N',
+parser.add_argument('--batch_size', type=int, default=16, metavar='N',
                     help='batch size (default: 24)')
 parser.add_argument('--clip', type=float, default=0.8,
                     help='gradient clip value (default: 0.8)')
@@ -64,7 +64,7 @@ parser.add_argument('--lr', type=float, default=1e-3,
                     help='initial learning rate (default: 1e-3)')
 parser.add_argument('--optim', type=str, default='Adam',
                     help='optimizer to use (default: Adam)')
-parser.add_argument('--num_epochs', type=int, default=40,
+parser.add_argument('--num_epochs', type=int, default=120,
                     help='number of epochs (default: 40)')
 parser.add_argument('--when', type=int, default=20,
                     help='when to decay learning rate (default: 20)')
@@ -119,7 +119,8 @@ if torch.cuda.is_available():
 ####################################################################
 
 print("Start loading the data....")
-
+print(args.dataset)
+print(args.data_path)
 train_data = get_data(args, dataset, 'train')
 valid_data = get_data(args, dataset, 'valid')
 test_data = get_data(args, dataset, 'test')
