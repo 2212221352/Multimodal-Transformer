@@ -1,7 +1,7 @@
 '''
 Author: your name
 Date: 2022-01-07 18:32:31
-LastEditTime: 2022-01-07 19:12:43
+LastEditTime: 2022-01-08 15:01:44
 LastEditors: Please set LastEditors
 Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 FilePath: /my_code/Multimodal-Transformer/src/dataset.py
@@ -39,7 +39,7 @@ class Multimodal_Datasets(Dataset):
         self.bert_transformer = bert_transformer
 
         if self.bert_transformer == 1:
-            self.labels = torch.tensor(dataset[split_type]['regression_labels'].astype(np.float32)).cpu().detach()
+            self.labels = torch.tensor(dataset[split_type]['regression_labels'].astype(np.float32)).reshape((self.text.shape[0], 1,1)).cpu().detach()
         else:
             self.labels = torch.tensor(dataset[split_type]['labels'].astype(np.float32)).cpu().detach()
         # Note: this is STILL an numpy array

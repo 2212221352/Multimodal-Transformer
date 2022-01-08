@@ -165,7 +165,7 @@ def train_model(settings, hyp_params, train_loader, valid_loader, test_loader):
         start = time.time()
         train(model, optimizer, criterion, ctc_a2l_module, ctc_v2l_module, ctc_a2l_optimizer, ctc_v2l_optimizer, ctc_criterion)
         val_loss, _, _ = evaluate(model, ctc_a2l_module, ctc_v2l_module, criterion, test=False)
-        test_loss, _, _ = evaluate(model, ctc_a2l_module, ctc_v2l_module, criterion, test=True)
+        test_loss, results, truths = evaluate(model, ctc_a2l_module, ctc_v2l_module, criterion, test=True)
         
         end = time.time()
         duration = end-start
@@ -179,6 +179,11 @@ def train_model(settings, hyp_params, train_loader, valid_loader, test_loader):
             print(f"Saved model at pre_trained_models/{hyp_params.name}.pt!")
             save_model(hyp_params, model, name=hyp_params.name)
             best_valid = val_loss
+        
+        if hyp_params.dataset == "mosei":
+            eval_mosei_senti(results, truths, True)
+        elif hyp_params.dataset == 'mosi':
+            eval_mosi(results, truths, True)
 
     model = load_model(hyp_params, name=hyp_params.name)
     _, results, truths = evaluate(model, ctc_a2l_module, ctc_v2l_module, criterion, test=True)

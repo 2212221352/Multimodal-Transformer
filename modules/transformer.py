@@ -155,8 +155,7 @@ class TransformerEncoderLayer_WithAoA(nn.Module):
         x = self.maybe_layer_norm(0, x, after=True)
 
         residual = x
-        #此时这里加入AOA机制  用来进一步过滤掉不相关的信息。
-
+    
         x = self.maybe_layer_norm(1, x, before=True)
         x = F.relu(self.fc1(x))
         x = F.dropout(x, p=self.relu_dropout, training=self.training)

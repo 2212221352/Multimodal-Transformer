@@ -12,7 +12,7 @@ class MultiheadAttention(nn.Module):
     """
 
     def __init__(self, embed_dim, num_heads, attn_dropout=0.,
-                 bias=True, add_bias_kv=False, add_zero_attn=False):
+                 bias=True, add_bias_kv=False, add_zero_attn=False,aoa = 1):
         super().__init__()
         self.embed_dim = embed_dim
         self.num_heads = num_heads
@@ -34,6 +34,17 @@ class MultiheadAttention(nn.Module):
             self.bias_k = self.bias_v = None
 
         self.add_zero_attn = add_zero_attn
+        #AOA注意力机制
+        self.use_aoa = 1
+        dropout_aoa = 1
+
+        if self.use_aoa:
+            self.aoa_layer =  nn.Sequential(nn.Linear((1 + 1) * embed_dim, 2 * embed_dim), nn.GLU())
+            # dropout to the input of AoA layer
+            if dropout_aoa > 0:
+                self.dropout_aoa = nn.Dropout(p=0.3)
+            else:
+                self.dropout_aoa = lambda x:x
 
         self.reset_parameters()
 
@@ -126,11 +137,22 @@ class MultiheadAttention(nn.Module):
         assert list(attn.size()) == [bsz * self.num_heads, tgt_len, self.head_dim]
 
         attn = attn.transpose(0, 1).contiguous().view(tgt_len, bsz, embed_dim)
+
+
+        if self.use_aoa:
+            # Apply AoA
+            q1 = query.transpose(0,1)
+            a1 = attn.transpose(0,1)
+            attn2 = self.aoa_layer(self.dropout_aoa(torch.cat([a1, q1], -1)))
+            attn = attn2.transpose(0,1)
+            
         attn = self.out_proj(attn)
 
         # average attention weights over heads
         attn_weights = attn_weights.view(bsz, self.num_heads, tgt_len, src_len)
         attn_weights = attn_weights.sum(dim=1) / self.num_heads
+
+
         return attn, attn_weights
 
     def in_proj_qkv(self, query):

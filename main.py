@@ -21,9 +21,9 @@ parser.add_argument('--lonly', action='store_true',
                     help='use the crossmodal fusion into l (default: False)')
 parser.add_argument('--aligned', action='store_true',
                     help='consider aligned experiment or not (default: False)')
-parser.add_argument('--dataset', type=str, default='mosi',
+parser.add_argument('--dataset', type=str, default='mosei',
                     help='dataset to use (default: mosei_senti)')
-parser.add_argument('--data_path', type=str, default='/home/pc/aibot/BAS/data/multimodal/data_transformer',
+parser.add_argument('--data_path', type=str, default='/home/pc/aibot/BAS/data/multimodal/data_bert/mosei',
                     help='path for storing the dataset')
 
 parser.add_argument('--flag', type=int, default=0,
@@ -48,7 +48,7 @@ parser.add_argument('--out_dropout', type=float, default=0.0,
                     help='output layer dropout')
 
 # Architecture
-parser.add_argument('--nlevels', type=int, default=5,
+parser.add_argument('--nlevels', type=int, default=6,
                     help='number of layers in the network (default: 5)')
 parser.add_argument('--num_heads', type=int, default=5,
                     help='number of heads for the transformer network (default: 5)')
