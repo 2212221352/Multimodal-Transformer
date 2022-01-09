@@ -35,7 +35,7 @@ class MultiheadAttention(nn.Module):
 
         self.add_zero_attn = add_zero_attn
         #AOA注意力机制
-        self.use_aoa = 1
+        self.use_aoa = 0
         dropout_aoa = 1
 
         if self.use_aoa:
