@@ -23,7 +23,7 @@ parser.add_argument('--aligned', action='store_true',
                     help='consider aligned experiment or not (default: False)')
 parser.add_argument('--dataset', type=str, default='mosei',
                     help='dataset to use (default: mosei_senti)')
-parser.add_argument('--data_path', type=str, default='/home/pc/aibot/BAS/data/multimodal/data_bert/mosei',
+parser.add_argument('--data_path', type=str, default='/home/pc/disk_2T/pc/jupyter/BAS/data/multimodal/data_bert/mosei',
                     help='path for storing the dataset')
 
 parser.add_argument('--flag', type=int, default=0,
