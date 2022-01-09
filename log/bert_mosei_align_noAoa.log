@@ -3249,3 +3249,393 @@ Epoch 74 | Batch 570/1020 | Time/Batch(ms) 190.42 | Train Loss 0.4312
 Epoch 74 | Batch 600/1020 | Time/Batch(ms) 188.19 | Train Loss 0.4337
 Epoch 74 | Batch 630/1020 | Time/Batch(ms) 186.04 | Train Loss 0.4216
 Epoch 74 | Batch 660/1020 | Time/Batch(ms) 188.26 | Train Loss 0.4646
+Epoch 74 | Batch 690/1020 | Time/Batch(ms) 196.22 | Train Loss 0.4145
+Epoch 74 | Batch 720/1020 | Time/Batch(ms) 193.80 | Train Loss 0.4136
+Epoch 74 | Batch 750/1020 | Time/Batch(ms) 182.55 | Train Loss 0.4106
+Epoch 74 | Batch 780/1020 | Time/Batch(ms) 193.70 | Train Loss 0.4084
+Epoch 74 | Batch 810/1020 | Time/Batch(ms) 195.59 | Train Loss 0.4270
+Epoch 74 | Batch 840/1020 | Time/Batch(ms) 195.40 | Train Loss 0.4394
+Epoch 74 | Batch 870/1020 | Time/Batch(ms) 189.68 | Train Loss 0.4291
+Epoch 74 | Batch 900/1020 | Time/Batch(ms) 192.04 | Train Loss 0.4229
+Epoch 74 | Batch 930/1020 | Time/Batch(ms) 191.06 | Train Loss 0.4443
+Epoch 74 | Batch 960/1020 | Time/Batch(ms) 188.53 | Train Loss 0.4019
+Epoch 74 | Batch 990/1020 | Time/Batch(ms) 202.36 | Train Loss 0.4363
+Epoch 74 | Batch 1020/1020 | Time/Batch(ms) 186.63 | Train Loss 0.3939
+Epoch    74: reducing learning rate of group 0 to 1.0000e-06.
+--------------------------------------------------
+Epoch 74 | Time 223.4514 sec | Valid Loss 0.5553 | Test Loss 0.5835
+--------------------------------------------------
+MAE:  0.5835319
+Correlation Coefficient:  0.7232508249121671
+mult_acc_7:  0.5181369392573514
+mult_acc_5:  0.5400300493668169
+F1 score:  0.8292698559911019
+Accuracy:  0.8288387451843698
+--------------------------------------------------
+Epoch 75 | Batch  30/1020 | Time/Batch(ms) 196.46 | Train Loss 0.3861
+Epoch 75 | Batch  60/1020 | Time/Batch(ms) 191.30 | Train Loss 0.4090
+Epoch 75 | Batch  90/1020 | Time/Batch(ms) 194.32 | Train Loss 0.4066
+Epoch 75 | Batch 120/1020 | Time/Batch(ms) 191.64 | Train Loss 0.4104
+Epoch 75 | Batch 150/1020 | Time/Batch(ms) 184.10 | Train Loss 0.4343
+Epoch 75 | Batch 180/1020 | Time/Batch(ms) 186.89 | Train Loss 0.4256
+Epoch 75 | Batch 210/1020 | Time/Batch(ms) 191.04 | Train Loss 0.3925
+Epoch 75 | Batch 240/1020 | Time/Batch(ms) 193.71 | Train Loss 0.4402
+Epoch 75 | Batch 270/1020 | Time/Batch(ms) 192.54 | Train Loss 0.4456
+Epoch 75 | Batch 300/1020 | Time/Batch(ms) 191.59 | Train Loss 0.4046
+Epoch 75 | Batch 330/1020 | Time/Batch(ms) 188.01 | Train Loss 0.4656
+Epoch 75 | Batch 360/1020 | Time/Batch(ms) 187.28 | Train Loss 0.4381
+Epoch 75 | Batch 390/1020 | Time/Batch(ms) 197.10 | Train Loss 0.4280
+Epoch 75 | Batch 420/1020 | Time/Batch(ms) 187.38 | Train Loss 0.4010
+Epoch 75 | Batch 450/1020 | Time/Batch(ms) 190.93 | Train Loss 0.4798
+Epoch 75 | Batch 480/1020 | Time/Batch(ms) 188.28 | Train Loss 0.4023
+Epoch 75 | Batch 510/1020 | Time/Batch(ms) 188.05 | Train Loss 0.4229
+Epoch 75 | Batch 540/1020 | Time/Batch(ms) 183.11 | Train Loss 0.4447
+Epoch 75 | Batch 570/1020 | Time/Batch(ms) 186.09 | Train Loss 0.4073
+Epoch 75 | Batch 600/1020 | Time/Batch(ms) 189.32 | Train Loss 0.4003
+Epoch 75 | Batch 630/1020 | Time/Batch(ms) 183.45 | Train Loss 0.4168
+Epoch 75 | Batch 660/1020 | Time/Batch(ms) 184.99 | Train Loss 0.4366
+Epoch 75 | Batch 690/1020 | Time/Batch(ms) 190.57 | Train Loss 0.4102
+Epoch 75 | Batch 720/1020 | Time/Batch(ms) 192.84 | Train Loss 0.4289
+Epoch 75 | Batch 750/1020 | Time/Batch(ms) 182.67 | Train Loss 0.4052
+Epoch 75 | Batch 780/1020 | Time/Batch(ms) 191.47 | Train Loss 0.4343
+Epoch 75 | Batch 810/1020 | Time/Batch(ms) 192.33 | Train Loss 0.4290
+Epoch 75 | Batch 840/1020 | Time/Batch(ms) 183.45 | Train Loss 0.4384
+Epoch 75 | Batch 870/1020 | Time/Batch(ms) 188.00 | Train Loss 0.3988
+Epoch 75 | Batch 900/1020 | Time/Batch(ms) 192.66 | Train Loss 0.4249
+Epoch 75 | Batch 930/1020 | Time/Batch(ms) 188.75 | Train Loss 0.3873
+Epoch 75 | Batch 960/1020 | Time/Batch(ms) 184.20 | Train Loss 0.4374
+Epoch 75 | Batch 990/1020 | Time/Batch(ms) 188.71 | Train Loss 0.4158
+Epoch 75 | Batch 1020/1020 | Time/Batch(ms) 187.69 | Train Loss 0.4079
+--------------------------------------------------
+Epoch 75 | Time 223.3983 sec | Valid Loss 0.5546 | Test Loss 0.5828
+--------------------------------------------------
+MAE:  0.5827588
+Correlation Coefficient:  0.7234770170156324
+mult_acc_7:  0.519210130929384
+mult_acc_5:  0.5406739643700365
+F1 score:  0.8303956562230145
+Accuracy:  0.8299394606494221
+--------------------------------------------------
+Epoch 76 | Batch  30/1020 | Time/Batch(ms) 188.70 | Train Loss 0.4391
+Epoch 76 | Batch  60/1020 | Time/Batch(ms) 190.78 | Train Loss 0.4352
+Epoch 76 | Batch  90/1020 | Time/Batch(ms) 188.92 | Train Loss 0.4584
+Epoch 76 | Batch 120/1020 | Time/Batch(ms) 190.61 | Train Loss 0.4313
+Epoch 76 | Batch 150/1020 | Time/Batch(ms) 187.90 | Train Loss 0.4512
+Epoch 76 | Batch 180/1020 | Time/Batch(ms) 190.85 | Train Loss 0.4252
+Epoch 76 | Batch 210/1020 | Time/Batch(ms) 195.73 | Train Loss 0.4175
+Epoch 76 | Batch 240/1020 | Time/Batch(ms) 189.61 | Train Loss 0.4573
+Epoch 76 | Batch 270/1020 | Time/Batch(ms) 187.84 | Train Loss 0.4156
+Epoch 76 | Batch 300/1020 | Time/Batch(ms) 188.26 | Train Loss 0.4138
+Epoch 76 | Batch 330/1020 | Time/Batch(ms) 190.90 | Train Loss 0.4372
+Epoch 76 | Batch 360/1020 | Time/Batch(ms) 188.95 | Train Loss 0.4357
+Epoch 76 | Batch 390/1020 | Time/Batch(ms) 186.10 | Train Loss 0.4137
+Epoch 76 | Batch 420/1020 | Time/Batch(ms) 193.44 | Train Loss 0.3857
+Epoch 76 | Batch 450/1020 | Time/Batch(ms) 190.59 | Train Loss 0.4376
+Epoch 76 | Batch 480/1020 | Time/Batch(ms) 187.08 | Train Loss 0.3972
+Epoch 76 | Batch 510/1020 | Time/Batch(ms) 194.28 | Train Loss 0.4207
+Epoch 76 | Batch 540/1020 | Time/Batch(ms) 191.66 | Train Loss 0.4380
+Epoch 76 | Batch 570/1020 | Time/Batch(ms) 191.16 | Train Loss 0.4307
+Epoch 76 | Batch 600/1020 | Time/Batch(ms) 196.42 | Train Loss 0.3893
+Epoch 76 | Batch 630/1020 | Time/Batch(ms) 189.81 | Train Loss 0.3933
+Epoch 76 | Batch 660/1020 | Time/Batch(ms) 192.89 | Train Loss 0.4156
+Epoch 76 | Batch 690/1020 | Time/Batch(ms) 185.17 | Train Loss 0.4531
+Epoch 76 | Batch 720/1020 | Time/Batch(ms) 193.65 | Train Loss 0.4221
+Epoch 76 | Batch 750/1020 | Time/Batch(ms) 192.18 | Train Loss 0.4133
+Epoch 76 | Batch 780/1020 | Time/Batch(ms) 189.05 | Train Loss 0.4069
+Epoch 76 | Batch 810/1020 | Time/Batch(ms) 191.72 | Train Loss 0.4101
+Epoch 76 | Batch 840/1020 | Time/Batch(ms) 192.77 | Train Loss 0.3980
+Epoch 76 | Batch 870/1020 | Time/Batch(ms) 189.99 | Train Loss 0.3879
+Epoch 76 | Batch 900/1020 | Time/Batch(ms) 190.83 | Train Loss 0.4147
+Epoch 76 | Batch 930/1020 | Time/Batch(ms) 195.17 | Train Loss 0.3689
+Epoch 76 | Batch 960/1020 | Time/Batch(ms) 188.01 | Train Loss 0.4160
+Epoch 76 | Batch 990/1020 | Time/Batch(ms) 194.67 | Train Loss 0.3963
+Epoch 76 | Batch 1020/1020 | Time/Batch(ms) 191.30 | Train Loss 0.4497
+--------------------------------------------------
+Epoch 76 | Time 224.6764 sec | Valid Loss 0.5541 | Test Loss 0.5825
+--------------------------------------------------
+MAE:  0.5824558
+Correlation Coefficient:  0.7235141955825932
+mult_acc_7:  0.5183515775917579
+mult_acc_5:  0.5396007726980039
+F1 score:  0.830508374828943
+Accuracy:  0.8299394606494221
+--------------------------------------------------
+Epoch 77 | Batch  30/1020 | Time/Batch(ms) 195.34 | Train Loss 0.4402
+Epoch 77 | Batch  60/1020 | Time/Batch(ms) 186.89 | Train Loss 0.3918
+Epoch 77 | Batch  90/1020 | Time/Batch(ms) 193.78 | Train Loss 0.3852
+Epoch 77 | Batch 120/1020 | Time/Batch(ms) 188.69 | Train Loss 0.4223
+Epoch 77 | Batch 150/1020 | Time/Batch(ms) 189.94 | Train Loss 0.4450
+Epoch 77 | Batch 180/1020 | Time/Batch(ms) 189.00 | Train Loss 0.4646
+Epoch 77 | Batch 210/1020 | Time/Batch(ms) 188.23 | Train Loss 0.4199
+Epoch 77 | Batch 240/1020 | Time/Batch(ms) 186.58 | Train Loss 0.4146
+Epoch 77 | Batch 270/1020 | Time/Batch(ms) 189.68 | Train Loss 0.4350
+Epoch 77 | Batch 300/1020 | Time/Batch(ms) 191.44 | Train Loss 0.4101
+Epoch 77 | Batch 330/1020 | Time/Batch(ms) 192.44 | Train Loss 0.4286
+Epoch 77 | Batch 360/1020 | Time/Batch(ms) 192.60 | Train Loss 0.4226
+Epoch 77 | Batch 390/1020 | Time/Batch(ms) 187.18 | Train Loss 0.4348
+Epoch 77 | Batch 420/1020 | Time/Batch(ms) 188.38 | Train Loss 0.4382
+Epoch 77 | Batch 450/1020 | Time/Batch(ms) 193.91 | Train Loss 0.4440
+Epoch 77 | Batch 480/1020 | Time/Batch(ms) 188.72 | Train Loss 0.4205
+Epoch 77 | Batch 510/1020 | Time/Batch(ms) 187.55 | Train Loss 0.4173
+Epoch 77 | Batch 540/1020 | Time/Batch(ms) 194.31 | Train Loss 0.4039
+Epoch 77 | Batch 570/1020 | Time/Batch(ms) 185.00 | Train Loss 0.4414
+Epoch 77 | Batch 600/1020 | Time/Batch(ms) 187.18 | Train Loss 0.4080
+Epoch 77 | Batch 630/1020 | Time/Batch(ms) 188.80 | Train Loss 0.4075
+Epoch 77 | Batch 660/1020 | Time/Batch(ms) 184.36 | Train Loss 0.4152
+Epoch 77 | Batch 690/1020 | Time/Batch(ms) 189.13 | Train Loss 0.4323
+Epoch 77 | Batch 720/1020 | Time/Batch(ms) 186.86 | Train Loss 0.4350
+Epoch 77 | Batch 750/1020 | Time/Batch(ms) 185.34 | Train Loss 0.4250
+Epoch 77 | Batch 780/1020 | Time/Batch(ms) 185.66 | Train Loss 0.3909
+Epoch 77 | Batch 810/1020 | Time/Batch(ms) 193.37 | Train Loss 0.4163
+Epoch 77 | Batch 840/1020 | Time/Batch(ms) 189.33 | Train Loss 0.4067
+Epoch 77 | Batch 870/1020 | Time/Batch(ms) 185.27 | Train Loss 0.3910
+Epoch 77 | Batch 900/1020 | Time/Batch(ms) 190.49 | Train Loss 0.4338
+Epoch 77 | Batch 930/1020 | Time/Batch(ms) 185.50 | Train Loss 0.4047
+Epoch 77 | Batch 960/1020 | Time/Batch(ms) 185.77 | Train Loss 0.4254
+Epoch 77 | Batch 990/1020 | Time/Batch(ms) 185.82 | Train Loss 0.4068
+Epoch 77 | Batch 1020/1020 | Time/Batch(ms) 180.97 | Train Loss 0.4525
+--------------------------------------------------
+Epoch 77 | Time 223.0615 sec | Valid Loss 0.5542 | Test Loss 0.5822
+--------------------------------------------------
+MAE:  0.58220756
+Correlation Coefficient:  0.7235800259188807
+mult_acc_7:  0.5194247692637906
+mult_acc_5:  0.5406739643700365
+F1 score:  0.8299313929315124
+Accuracy:  0.8293891029168959
+--------------------------------------------------
+Epoch 78 | Batch  30/1020 | Time/Batch(ms) 192.20 | Train Loss 0.4264
+Epoch 78 | Batch  60/1020 | Time/Batch(ms) 185.86 | Train Loss 0.4387
+Epoch 78 | Batch  90/1020 | Time/Batch(ms) 185.81 | Train Loss 0.4307
+Epoch 78 | Batch 120/1020 | Time/Batch(ms) 190.05 | Train Loss 0.3969
+Epoch 78 | Batch 150/1020 | Time/Batch(ms) 191.13 | Train Loss 0.4176
+Epoch 78 | Batch 180/1020 | Time/Batch(ms) 191.05 | Train Loss 0.4265
+Epoch 78 | Batch 210/1020 | Time/Batch(ms) 194.15 | Train Loss 0.4055
+Epoch 78 | Batch 240/1020 | Time/Batch(ms) 192.80 | Train Loss 0.4128
+Epoch 78 | Batch 270/1020 | Time/Batch(ms) 189.66 | Train Loss 0.4484
+Epoch 78 | Batch 300/1020 | Time/Batch(ms) 191.35 | Train Loss 0.4139
+Epoch 78 | Batch 330/1020 | Time/Batch(ms) 191.71 | Train Loss 0.4171
+Epoch 78 | Batch 360/1020 | Time/Batch(ms) 190.72 | Train Loss 0.3894
+Epoch 78 | Batch 390/1020 | Time/Batch(ms) 190.34 | Train Loss 0.4307
+Epoch 78 | Batch 420/1020 | Time/Batch(ms) 192.81 | Train Loss 0.4327
+Epoch 78 | Batch 450/1020 | Time/Batch(ms) 193.24 | Train Loss 0.4324
+Epoch 78 | Batch 480/1020 | Time/Batch(ms) 188.84 | Train Loss 0.4142
+Epoch 78 | Batch 510/1020 | Time/Batch(ms) 188.10 | Train Loss 0.4051
+Epoch 78 | Batch 540/1020 | Time/Batch(ms) 192.78 | Train Loss 0.3938
+Epoch 78 | Batch 570/1020 | Time/Batch(ms) 191.22 | Train Loss 0.4160
+Epoch 78 | Batch 600/1020 | Time/Batch(ms) 187.06 | Train Loss 0.4562
+Epoch 78 | Batch 630/1020 | Time/Batch(ms) 187.02 | Train Loss 0.4035
+Epoch 78 | Batch 660/1020 | Time/Batch(ms) 187.25 | Train Loss 0.4382
+Epoch 78 | Batch 690/1020 | Time/Batch(ms) 192.91 | Train Loss 0.4471
+Epoch 78 | Batch 720/1020 | Time/Batch(ms) 192.95 | Train Loss 0.4274
+Epoch 78 | Batch 750/1020 | Time/Batch(ms) 186.67 | Train Loss 0.4059
+Epoch 78 | Batch 780/1020 | Time/Batch(ms) 185.24 | Train Loss 0.4055
+Epoch 78 | Batch 810/1020 | Time/Batch(ms) 186.49 | Train Loss 0.3929
+Epoch 78 | Batch 840/1020 | Time/Batch(ms) 192.06 | Train Loss 0.4154
+Epoch 78 | Batch 870/1020 | Time/Batch(ms) 188.30 | Train Loss 0.4136
+Epoch 78 | Batch 900/1020 | Time/Batch(ms) 187.02 | Train Loss 0.4175
+Epoch 78 | Batch 930/1020 | Time/Batch(ms) 193.98 | Train Loss 0.4078
+Epoch 78 | Batch 960/1020 | Time/Batch(ms) 193.65 | Train Loss 0.4774
+Epoch 78 | Batch 990/1020 | Time/Batch(ms) 187.76 | Train Loss 0.4399
+Epoch 78 | Batch 1020/1020 | Time/Batch(ms) 186.55 | Train Loss 0.4351
+--------------------------------------------------
+Epoch 78 | Time 224.2976 sec | Valid Loss 0.5538 | Test Loss 0.5821
+--------------------------------------------------
+MAE:  0.5821363
+Correlation Coefficient:  0.7235575281201826
+mult_acc_7:  0.5179223009229449
+mult_acc_5:  0.5393861343635974
+F1 score:  0.8308540181961994
+Accuracy:  0.8302146395156852
+--------------------------------------------------
+Epoch 79 | Batch  30/1020 | Time/Batch(ms) 198.45 | Train Loss 0.4280
+Epoch 79 | Batch  60/1020 | Time/Batch(ms) 187.44 | Train Loss 0.4300
+Epoch 79 | Batch  90/1020 | Time/Batch(ms) 187.06 | Train Loss 0.4376
+Epoch 79 | Batch 120/1020 | Time/Batch(ms) 187.77 | Train Loss 0.4407
+Epoch 79 | Batch 150/1020 | Time/Batch(ms) 191.69 | Train Loss 0.4473
+Epoch 79 | Batch 180/1020 | Time/Batch(ms) 179.77 | Train Loss 0.4398
+Epoch 79 | Batch 210/1020 | Time/Batch(ms) 184.21 | Train Loss 0.3963
+Epoch 79 | Batch 240/1020 | Time/Batch(ms) 191.00 | Train Loss 0.4273
+Epoch 79 | Batch 270/1020 | Time/Batch(ms) 189.12 | Train Loss 0.4244
+Epoch 79 | Batch 300/1020 | Time/Batch(ms) 187.50 | Train Loss 0.4316
+Epoch 79 | Batch 330/1020 | Time/Batch(ms) 189.69 | Train Loss 0.4437
+Epoch 79 | Batch 360/1020 | Time/Batch(ms) 191.88 | Train Loss 0.4244
+Epoch 79 | Batch 390/1020 | Time/Batch(ms) 184.00 | Train Loss 0.3854
+Epoch 79 | Batch 420/1020 | Time/Batch(ms) 186.33 | Train Loss 0.3983
+Epoch 79 | Batch 450/1020 | Time/Batch(ms) 187.70 | Train Loss 0.4519
+Epoch 79 | Batch 480/1020 | Time/Batch(ms) 187.87 | Train Loss 0.3934
+Epoch 79 | Batch 510/1020 | Time/Batch(ms) 186.29 | Train Loss 0.4051
+Epoch 79 | Batch 540/1020 | Time/Batch(ms) 189.81 | Train Loss 0.3911
+Epoch 79 | Batch 570/1020 | Time/Batch(ms) 192.32 | Train Loss 0.4362
+Epoch 79 | Batch 600/1020 | Time/Batch(ms) 184.63 | Train Loss 0.4256
+Epoch 79 | Batch 630/1020 | Time/Batch(ms) 186.08 | Train Loss 0.3947
+Epoch 79 | Batch 660/1020 | Time/Batch(ms) 187.08 | Train Loss 0.4344
+Epoch 79 | Batch 690/1020 | Time/Batch(ms) 187.11 | Train Loss 0.4417
+Epoch 79 | Batch 720/1020 | Time/Batch(ms) 186.33 | Train Loss 0.3965
+Epoch 79 | Batch 750/1020 | Time/Batch(ms) 189.91 | Train Loss 0.4147
+Epoch 79 | Batch 780/1020 | Time/Batch(ms) 188.88 | Train Loss 0.4366
+Epoch 79 | Batch 810/1020 | Time/Batch(ms) 187.29 | Train Loss 0.4496
+Epoch 79 | Batch 840/1020 | Time/Batch(ms) 186.69 | Train Loss 0.3986
+Epoch 79 | Batch 870/1020 | Time/Batch(ms) 180.77 | Train Loss 0.4577
+Epoch 79 | Batch 900/1020 | Time/Batch(ms) 194.50 | Train Loss 0.4005
+Epoch 79 | Batch 930/1020 | Time/Batch(ms) 185.64 | Train Loss 0.4254
+Epoch 79 | Batch 960/1020 | Time/Batch(ms) 187.78 | Train Loss 0.4140
+Epoch 79 | Batch 990/1020 | Time/Batch(ms) 186.33 | Train Loss 0.4393
+Epoch 79 | Batch 1020/1020 | Time/Batch(ms) 186.79 | Train Loss 0.4132
+--------------------------------------------------
+Epoch 79 | Time 222.0370 sec | Valid Loss 0.5535 | Test Loss 0.5817
+--------------------------------------------------
+MAE:  0.58165157
+Correlation Coefficient:  0.7236894524383446
+mult_acc_7:  0.519210130929384
+mult_acc_5:  0.54045932603563
+F1 score:  0.8316621739119415
+Accuracy:  0.8310401761144744
+--------------------------------------------------
+Epoch 80 | Batch  30/1020 | Time/Batch(ms) 194.33 | Train Loss 0.4001
+Epoch 80 | Batch  60/1020 | Time/Batch(ms) 187.97 | Train Loss 0.4207
+Epoch 80 | Batch  90/1020 | Time/Batch(ms) 188.97 | Train Loss 0.4098
+Epoch 80 | Batch 120/1020 | Time/Batch(ms) 196.07 | Train Loss 0.4157
+Epoch 80 | Batch 150/1020 | Time/Batch(ms) 192.05 | Train Loss 0.3922
+Epoch 80 | Batch 180/1020 | Time/Batch(ms) 196.82 | Train Loss 0.4294
+Epoch 80 | Batch 210/1020 | Time/Batch(ms) 188.37 | Train Loss 0.3846
+Epoch 80 | Batch 240/1020 | Time/Batch(ms) 188.75 | Train Loss 0.4308
+Epoch 80 | Batch 270/1020 | Time/Batch(ms) 188.19 | Train Loss 0.4450
+Epoch 80 | Batch 300/1020 | Time/Batch(ms) 183.66 | Train Loss 0.4386
+Epoch 80 | Batch 330/1020 | Time/Batch(ms) 190.53 | Train Loss 0.4391
+Epoch 80 | Batch 360/1020 | Time/Batch(ms) 190.13 | Train Loss 0.4568
+Epoch 80 | Batch 390/1020 | Time/Batch(ms) 189.46 | Train Loss 0.4909
+Epoch 80 | Batch 420/1020 | Time/Batch(ms) 189.30 | Train Loss 0.4247
+Epoch 80 | Batch 450/1020 | Time/Batch(ms) 191.17 | Train Loss 0.4220
+Epoch 80 | Batch 480/1020 | Time/Batch(ms) 192.06 | Train Loss 0.3920
+Epoch 80 | Batch 510/1020 | Time/Batch(ms) 186.00 | Train Loss 0.4232
+Epoch 80 | Batch 540/1020 | Time/Batch(ms) 190.83 | Train Loss 0.4170
+Epoch 80 | Batch 570/1020 | Time/Batch(ms) 189.31 | Train Loss 0.4496
+Epoch 80 | Batch 600/1020 | Time/Batch(ms) 188.89 | Train Loss 0.4270
+Epoch 80 | Batch 630/1020 | Time/Batch(ms) 192.03 | Train Loss 0.4389
+Epoch 80 | Batch 660/1020 | Time/Batch(ms) 190.12 | Train Loss 0.3964
+Epoch 80 | Batch 690/1020 | Time/Batch(ms) 185.12 | Train Loss 0.4237
+Epoch 80 | Batch 720/1020 | Time/Batch(ms) 189.85 | Train Loss 0.4270
+Epoch 80 | Batch 750/1020 | Time/Batch(ms) 196.48 | Train Loss 0.4088
+Epoch 80 | Batch 780/1020 | Time/Batch(ms) 186.68 | Train Loss 0.3881
+Epoch 80 | Batch 810/1020 | Time/Batch(ms) 190.22 | Train Loss 0.4383
+Epoch 80 | Batch 840/1020 | Time/Batch(ms) 184.58 | Train Loss 0.4145
+Epoch 80 | Batch 870/1020 | Time/Batch(ms) 188.11 | Train Loss 0.4079
+Epoch 80 | Batch 900/1020 | Time/Batch(ms) 187.53 | Train Loss 0.4212
+Epoch 80 | Batch 930/1020 | Time/Batch(ms) 191.21 | Train Loss 0.4427
+Epoch 80 | Batch 960/1020 | Time/Batch(ms) 190.33 | Train Loss 0.3924
+Epoch 80 | Batch 990/1020 | Time/Batch(ms) 186.36 | Train Loss 0.4071
+Epoch 80 | Batch 1020/1020 | Time/Batch(ms) 180.22 | Train Loss 0.4214
+--------------------------------------------------
+Epoch 80 | Time 223.6024 sec | Valid Loss 0.5536 | Test Loss 0.5819
+--------------------------------------------------
+MAE:  0.58187413
+Correlation Coefficient:  0.7234674118973667
+mult_acc_7:  0.5179223009229449
+mult_acc_5:  0.5393861343635974
+F1 score:  0.8307968453909117
+Accuracy:  0.8302146395156852
+--------------------------------------------------
+Epoch 81 | Batch  30/1020 | Time/Batch(ms) 189.89 | Train Loss 0.4117
+Epoch 81 | Batch  60/1020 | Time/Batch(ms) 186.25 | Train Loss 0.4484
+Epoch 81 | Batch  90/1020 | Time/Batch(ms) 183.20 | Train Loss 0.3948
+Epoch 81 | Batch 120/1020 | Time/Batch(ms) 187.87 | Train Loss 0.4265
+Epoch 81 | Batch 150/1020 | Time/Batch(ms) 189.90 | Train Loss 0.4392
+Epoch 81 | Batch 180/1020 | Time/Batch(ms) 192.88 | Train Loss 0.4170
+Epoch 81 | Batch 210/1020 | Time/Batch(ms) 194.55 | Train Loss 0.4225
+Epoch 81 | Batch 240/1020 | Time/Batch(ms) 188.58 | Train Loss 0.4303
+Epoch 81 | Batch 270/1020 | Time/Batch(ms) 189.78 | Train Loss 0.3995
+Epoch 81 | Batch 300/1020 | Time/Batch(ms) 192.68 | Train Loss 0.4342
+Epoch 81 | Batch 330/1020 | Time/Batch(ms) 189.54 | Train Loss 0.4219
+Epoch 81 | Batch 360/1020 | Time/Batch(ms) 190.90 | Train Loss 0.4336
+Epoch 81 | Batch 390/1020 | Time/Batch(ms) 190.88 | Train Loss 0.4420
+Epoch 81 | Batch 420/1020 | Time/Batch(ms) 190.31 | Train Loss 0.4099
+Epoch 81 | Batch 450/1020 | Time/Batch(ms) 186.44 | Train Loss 0.4103
+Epoch 81 | Batch 480/1020 | Time/Batch(ms) 188.91 | Train Loss 0.4061
+Epoch 81 | Batch 510/1020 | Time/Batch(ms) 185.55 | Train Loss 0.4514
+Epoch 81 | Batch 540/1020 | Time/Batch(ms) 190.30 | Train Loss 0.4291
+Epoch 81 | Batch 570/1020 | Time/Batch(ms) 190.83 | Train Loss 0.4165
+Epoch 81 | Batch 600/1020 | Time/Batch(ms) 195.80 | Train Loss 0.4516
+Epoch 81 | Batch 630/1020 | Time/Batch(ms) 185.04 | Train Loss 0.4493
+Epoch 81 | Batch 660/1020 | Time/Batch(ms) 189.45 | Train Loss 0.4538
+Epoch 81 | Batch 690/1020 | Time/Batch(ms) 189.64 | Train Loss 0.4462
+Epoch 81 | Batch 720/1020 | Time/Batch(ms) 187.72 | Train Loss 0.4077
+Epoch 81 | Batch 750/1020 | Time/Batch(ms) 187.51 | Train Loss 0.4060
+Epoch 81 | Batch 780/1020 | Time/Batch(ms) 194.78 | Train Loss 0.4343
+Epoch 81 | Batch 810/1020 | Time/Batch(ms) 187.02 | Train Loss 0.3952
+Epoch 81 | Batch 840/1020 | Time/Batch(ms) 185.74 | Train Loss 0.4005
+Epoch 81 | Batch 870/1020 | Time/Batch(ms) 186.70 | Train Loss 0.4287
+Epoch 81 | Batch 900/1020 | Time/Batch(ms) 188.15 | Train Loss 0.4104
+Epoch 81 | Batch 930/1020 | Time/Batch(ms) 190.10 | Train Loss 0.4194
+Epoch 81 | Batch 960/1020 | Time/Batch(ms) 186.81 | Train Loss 0.4329
+Epoch 81 | Batch 990/1020 | Time/Batch(ms) 190.75 | Train Loss 0.3993
+Epoch 81 | Batch 1020/1020 | Time/Batch(ms) 190.23 | Train Loss 0.4058
+--------------------------------------------------
+Epoch 81 | Time 223.0916 sec | Valid Loss 0.5535 | Test Loss 0.5819
+--------------------------------------------------
+MAE:  0.5819353
+Correlation Coefficient:  0.7235584669433279
+mult_acc_7:  0.5189954925949775
+mult_acc_5:  0.5402446877012235
+F1 score:  0.8302769889377158
+Accuracy:  0.8296642817831591
+--------------------------------------------------
+Epoch 82 | Batch  30/1020 | Time/Batch(ms) 197.24 | Train Loss 0.4501
+Epoch 82 | Batch  60/1020 | Time/Batch(ms) 186.07 | Train Loss 0.4112
+Epoch 82 | Batch  90/1020 | Time/Batch(ms) 190.70 | Train Loss 0.3822
+Epoch 82 | Batch 120/1020 | Time/Batch(ms) 182.18 | Train Loss 0.4252
+Epoch 82 | Batch 150/1020 | Time/Batch(ms) 184.95 | Train Loss 0.4013
+Epoch 82 | Batch 180/1020 | Time/Batch(ms) 186.71 | Train Loss 0.3796
+Epoch 82 | Batch 210/1020 | Time/Batch(ms) 187.52 | Train Loss 0.4417
+Epoch 82 | Batch 240/1020 | Time/Batch(ms) 188.67 | Train Loss 0.4246
+Epoch 82 | Batch 270/1020 | Time/Batch(ms) 187.49 | Train Loss 0.4095
+Epoch 82 | Batch 300/1020 | Time/Batch(ms) 191.68 | Train Loss 0.4083
+Epoch 82 | Batch 330/1020 | Time/Batch(ms) 187.39 | Train Loss 0.4168
+Epoch 82 | Batch 360/1020 | Time/Batch(ms) 188.54 | Train Loss 0.4184
+Epoch 82 | Batch 390/1020 | Time/Batch(ms) 186.32 | Train Loss 0.4220
+Epoch 82 | Batch 420/1020 | Time/Batch(ms) 189.16 | Train Loss 0.4353
+Epoch 82 | Batch 450/1020 | Time/Batch(ms) 184.60 | Train Loss 0.3989
+Epoch 82 | Batch 480/1020 | Time/Batch(ms) 189.44 | Train Loss 0.4386
+Epoch 82 | Batch 510/1020 | Time/Batch(ms) 185.62 | Train Loss 0.4409
+Epoch 82 | Batch 540/1020 | Time/Batch(ms) 186.77 | Train Loss 0.4477
+Epoch 82 | Batch 570/1020 | Time/Batch(ms) 191.85 | Train Loss 0.3871
+Epoch 82 | Batch 600/1020 | Time/Batch(ms) 192.50 | Train Loss 0.4044
+Epoch 82 | Batch 630/1020 | Time/Batch(ms) 189.91 | Train Loss 0.4216
+Epoch 82 | Batch 660/1020 | Time/Batch(ms) 189.77 | Train Loss 0.4080
+Epoch 82 | Batch 690/1020 | Time/Batch(ms) 184.78 | Train Loss 0.4160
+Epoch 82 | Batch 720/1020 | Time/Batch(ms) 181.25 | Train Loss 0.4194
+Epoch 82 | Batch 750/1020 | Time/Batch(ms) 192.34 | Train Loss 0.4217
+Epoch 82 | Batch 780/1020 | Time/Batch(ms) 186.29 | Train Loss 0.4236
+Epoch 82 | Batch 810/1020 | Time/Batch(ms) 188.69 | Train Loss 0.4383
+Epoch 82 | Batch 840/1020 | Time/Batch(ms) 185.50 | Train Loss 0.4063
+Epoch 82 | Batch 870/1020 | Time/Batch(ms) 186.89 | Train Loss 0.4217
+Epoch 82 | Batch 900/1020 | Time/Batch(ms) 190.99 | Train Loss 0.4519
+Epoch 82 | Batch 930/1020 | Time/Batch(ms) 191.83 | Train Loss 0.4114
+Epoch 82 | Batch 960/1020 | Time/Batch(ms) 188.15 | Train Loss 0.4518
+Epoch 82 | Batch 990/1020 | Time/Batch(ms) 191.85 | Train Loss 0.3944
+Epoch 82 | Batch 1020/1020 | Time/Batch(ms) 185.74 | Train Loss 0.4112
+--------------------------------------------------
+Epoch 82 | Time 222.6142 sec | Valid Loss 0.5534 | Test Loss 0.5814
+--------------------------------------------------
+MAE:  0.5814377
+Correlation Coefficient:  0.7234199469971914
+mult_acc_7:  0.518780854260571
+mult_acc_5:  0.5398154110324104
+F1 score:  0.830508374828943
+Accuracy:  0.8299394606494221
+--------------------------------------------------
+Epoch 83 | Batch  30/1020 | Time/Batch(ms) 192.15 | Train Loss 0.4375
+Epoch 83 | Batch  60/1020 | Time/Batch(ms) 188.69 | Train Loss 0.4190
+Epoch 83 | Batch  90/1020 | Time/Batch(ms) 187.49 | Train Loss 0.4493
+Epoch 83 | Batch 120/1020 | Time/Batch(ms) 190.42 | Train Loss 0.4282
+Epoch 83 | Batch 150/1020 | Time/Batch(ms) 192.07 | Train Loss 0.4115
+Epoch 83 | Batch 180/1020 | Time/Batch(ms) 187.51 | Train Loss 0.4305
+Epoch 83 | Batch 210/1020 | Time/Batch(ms) 193.88 | Train Loss 0.4400
+Epoch 83 | Batch 240/1020 | Time/Batch(ms) 185.70 | Train Loss 0.4389
+Epoch 83 | Batch 270/1020 | Time/Batch(ms) 184.42 | Train Loss 0.4095
+Epoch 83 | Batch 300/1020 | Time/Batch(ms) 187.15 | Train Loss 0.4156
+Epoch 83 | Batch 330/1020 | Time/Batch(ms) 186.10 | Train Loss 0.4143
+Epoch 83 | Batch 360/1020 | Time/Batch(ms) 191.15 | Train Loss 0.4201
+Epoch 83 | Batch 390/1020 | Time/Batch(ms) 182.62 | Train Loss 0.4127
+Epoch 83 | Batch 420/1020 | Time/Batch(ms) 193.24 | Train Loss 0.4157
+Epoch 83 | Batch 450/1020 | Time/Batch(ms) 187.55 | Train Loss 0.4152
