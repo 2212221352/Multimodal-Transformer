@@ -27,6 +27,7 @@ class MULTModel(nn.Module):
         self.out_dropout = hyp_params.out_dropout
         self.embed_dropout = hyp_params.embed_dropout
         self.attn_mask = hyp_params.attn_mask
+        self.aoa = hyp_params.aoa
 
         combined_dim = self.d_l + self.d_a + self.d_v
 
@@ -96,7 +97,7 @@ class MULTModel(nn.Module):
                                   relu_dropout=self.relu_dropout,
                                   res_dropout=self.res_dropout,
                                   embed_dropout=self.embed_dropout,
-                                  attn_mask=self.attn_mask)
+                                  attn_mask=self.attn_mask,aoa = self.aoa)
             
     def forward(self, x_l, x_a, x_v):
         """
