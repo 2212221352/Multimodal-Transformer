@@ -114,6 +114,14 @@ class MULTModel(nn.Module):
         proj_x_v = proj_x_v.permute(2, 0, 1)
         proj_x_l = proj_x_l.permute(2, 0, 1)
 
+        #---start:在此处加入模态内部的建模inter-Attention---
+        
+        proj_x_a = self.transformer_with_self_text(proj_x_l)
+        proj_x_v = self.transformer_with_self_vision(proj_x_v)
+        proj_x_l = self.transformer_with_self_audio(proj_x_a)
+
+        #---end---
+
         if self.lonly:
             # (V,A) --> L
             h_l_with_as = self.trans_l_with_a(proj_x_l, proj_x_a, proj_x_a)    # Dimension (L, N, d_l)
