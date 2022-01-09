@@ -29,6 +29,9 @@ parser.add_argument('--data_path', type=str, default='/home/pc/disk_2T/pc/jupyte
 parser.add_argument('--flag', type=int, default=0,
                     help='0 transformer, 1 bert')
 
+parser.add_argument('--use_aoa', type=int, default=1,
+                    help='1 aoa, 0 noAoa')
+
 
 
 # Dropouts
@@ -147,6 +150,7 @@ hyp_params.use_cuda = use_cuda
 hyp_params.dataset = dataset
 hyp_params.when = args.when
 hyp_params.batch_chunk = args.batch_chunk
+hyp_params.use_aoa = args.use_aoa
 hyp_params.n_train, hyp_params.n_valid, hyp_params.n_test = len(train_data), len(valid_data), len(test_data)
 hyp_params.model = str.upper(args.model.strip())
 hyp_params.output_dim = output_dim_dict.get(dataset, 1)
