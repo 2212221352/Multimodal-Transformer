@@ -124,6 +124,7 @@ if torch.cuda.is_available():
 print("Start loading the data....")
 print(args.dataset)
 print(args.data_path)
+print("use_aoa",args.use_aoa)
 train_data = get_data(args, dataset, 'train')
 valid_data = get_data(args, dataset, 'valid')
 test_data = get_data(args, dataset, 'test')

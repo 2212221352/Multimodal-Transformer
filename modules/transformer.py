@@ -21,7 +21,7 @@ class TransformerEncoder(nn.Module):
     """
 
     def __init__(self, embed_dim, num_heads, layers, attn_dropout=0.0, relu_dropout=0.0, res_dropout=0.0,
-                 embed_dropout=0.0, attn_mask=False):
+                 embed_dropout=0.0, attn_mask=False,aoa = 1):
         super().__init__()
         self.dropout = embed_dropout      # Embedding dropout
         self.attn_dropout = attn_dropout
@@ -38,7 +38,7 @@ class TransformerEncoder(nn.Module):
                                                 attn_dropout=attn_dropout,
                                                 relu_dropout=relu_dropout,
                                                 res_dropout=res_dropout,
-                                                attn_mask=attn_mask)
+                                                attn_mask=attn_mask,aoa = aoa)
             self.layers.append(new_layer)
 
         self.register_buffer('version', torch.Tensor([2]))
@@ -110,7 +110,7 @@ class TransformerEncoderLayer_WithAoA(nn.Module):
     """
 
     def __init__(self, embed_dim, num_heads=4, attn_dropout=0.1, relu_dropout=0.1, res_dropout=0.1,
-                 attn_mask=False):
+                 attn_mask=False,aoa = 1):
         super().__init__()
         self.embed_dim = embed_dim
         self.num_heads = num_heads
@@ -118,7 +118,8 @@ class TransformerEncoderLayer_WithAoA(nn.Module):
         self.self_attn = MultiheadAttention(
             embed_dim=self.embed_dim,
             num_heads=self.num_heads,
-            attn_dropout=attn_dropout
+            attn_dropout=attn_dropout,
+            aoa = aoa
         )
         self.attn_mask = attn_mask
 

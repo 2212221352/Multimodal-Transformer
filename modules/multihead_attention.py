@@ -35,9 +35,8 @@ class MultiheadAttention(nn.Module):
 
         self.add_zero_attn = add_zero_attn
         #AOA注意力机制
-        self.use_aoa = 0
         dropout_aoa = 1
-
+        self.use_aoa = aoa
         if self.use_aoa:
             self.aoa_layer =  nn.Sequential(nn.Linear((1 + 1) * embed_dim, 2 * embed_dim), nn.GLU())
             # dropout to the input of AoA layer
