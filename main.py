@@ -37,17 +37,17 @@ parser.add_argument('--use_aoa', type=int, default=1,
 # Dropouts
 parser.add_argument('--attn_dropout', type=float, default=0.1,
                     help='attention dropout')
-parser.add_argument('--attn_dropout_a', type=float, default=0.0,
+parser.add_argument('--attn_dropout_a', type=float, default=0.1,
                     help='attention dropout (for audio)')
-parser.add_argument('--attn_dropout_v', type=float, default=0.0,
+parser.add_argument('--attn_dropout_v', type=float, default=0.1,
                     help='attention dropout (for visual)')
 parser.add_argument('--relu_dropout', type=float, default=0.1,
                     help='relu dropout')
-parser.add_argument('--embed_dropout', type=float, default=0.25,
+parser.add_argument('--embed_dropout', type=float, default=0.3,
                     help='embedding dropout')
 parser.add_argument('--res_dropout', type=float, default=0.1,
                     help='residual block dropout')
-parser.add_argument('--out_dropout', type=float, default=0.0,
+parser.add_argument('--out_dropout', type=float, default=0.1,
                     help='output layer dropout')
 
 # Architecture
@@ -122,9 +122,12 @@ if torch.cuda.is_available():
 ####################################################################
 
 print("Start loading the data....")
-print(args.dataset)
-print(args.data_path)
-print("use_aoa",args.use_aoa)
+print("dataset:",args.dataset)
+print("data_path:",args.data_path)
+print("use_aoa:",args.use_aoa)
+print("n layrers:",args.nlevels)
+print("num_head:",args.num_heads)
+print("num_epochs:",args.num_epochs)
 train_data = get_data(args, dataset, 'train')
 valid_data = get_data(args, dataset, 'valid')
 test_data = get_data(args, dataset, 'test')
