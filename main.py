@@ -23,10 +23,10 @@ parser.add_argument('--aligned', action='store_true',
                     help='consider aligned experiment or not (default: False)')
 parser.add_argument('--dataset', type=str, default='mosei',
                     help='dataset to use (default: mosei_senti)')
-parser.add_argument('--data_path', type=str, default='/home/pc/disk_2T/pc/jupyter/BAS/data/multimodal/data_bert/mosei',
+parser.add_argument('--data_path', type=str, default='/home/pc/aibot/BAS/data/multimodal/data_bert/mosei',
                     help='path for storing the dataset')
 
-parser.add_argument('--flag', type=int, default=0,
+parser.add_argument('--flag', type=int, default=1,
                     help='0 transformer, 1 bert')
 
 parser.add_argument('--use_aoa', type=int, default=1,
@@ -128,6 +128,7 @@ print("use_aoa:",args.use_aoa)
 print("n layrers:",args.nlevels)
 print("num_head:",args.num_heads)
 print("num_epochs:",args.num_epochs)
+print("batch_size:",args.batch_size)
 train_data = get_data(args, dataset, 'train')
 valid_data = get_data(args, dataset, 'valid')
 test_data = get_data(args, dataset, 'test')
