@@ -26,7 +26,7 @@ parser.add_argument('--dataset', type=str, default='mosei',
 parser.add_argument('--data_path', type=str, default='/home/pc/aibot/BAS/data/multimodal/data_bert/mosei',
                     help='path for storing the dataset')
 
-parser.add_argument('--flag', type=int, default=0,
+parser.add_argument('--flag', type=int, default=1,
                     help='0 transformer, 1 bert')
 
 parser.add_argument('--use_aoa', type=int, default=1,
@@ -37,21 +37,21 @@ parser.add_argument('--use_aoa', type=int, default=1,
 # Dropouts
 parser.add_argument('--attn_dropout', type=float, default=0.1,
                     help='attention dropout')
-parser.add_argument('--attn_dropout_a', type=float, default=0.0,
+parser.add_argument('--attn_dropout_a', type=float, default=0.1,
                     help='attention dropout (for audio)')
-parser.add_argument('--attn_dropout_v', type=float, default=0.0,
+parser.add_argument('--attn_dropout_v', type=float, default=0.1,
                     help='attention dropout (for visual)')
 parser.add_argument('--relu_dropout', type=float, default=0.1,
                     help='relu dropout')
-parser.add_argument('--embed_dropout', type=float, default=0.25,
+parser.add_argument('--embed_dropout', type=float, default=0.3,
                     help='embedding dropout')
 parser.add_argument('--res_dropout', type=float, default=0.1,
                     help='residual block dropout')
-parser.add_argument('--out_dropout', type=float, default=0.0,
+parser.add_argument('--out_dropout', type=float, default=0.1,
                     help='output layer dropout')
 
 # Architecture
-parser.add_argument('--nlevels', type=int, default=4,
+parser.add_argument('--nlevels', type=int, default=6,
                     help='number of layers in the network (default: 5)')
 parser.add_argument('--num_heads', type=int, default=8,
                     help='number of heads for the transformer network (default: 5)')
@@ -67,7 +67,7 @@ parser.add_argument('--lr', type=float, default=1e-3,
                     help='initial learning rate (default: 1e-3)')
 parser.add_argument('--optim', type=str, default='Adam',
                     help='optimizer to use (default: Adam)')
-parser.add_argument('--num_epochs', type=int, default=120,
+parser.add_argument('--num_epochs', type=int, default=40,
                     help='number of epochs (default: 40)')
 parser.add_argument('--when', type=int, default=20,
                     help='when to decay learning rate (default: 20)')
@@ -122,9 +122,13 @@ if torch.cuda.is_available():
 ####################################################################
 
 print("Start loading the data....")
-print(args.dataset)
-print(args.data_path)
-print("use_aoa",args.use_aoa)
+print("dataset:",args.dataset)
+print("data_path:",args.data_path)
+print("use_aoa:",args.use_aoa)
+print("n layrers:",args.nlevels)
+print("num_head:",args.num_heads)
+print("num_epochs:",args.num_epochs)
+print("batch_size:",args.batch_size)
 train_data = get_data(args, dataset, 'train')
 valid_data = get_data(args, dataset, 'valid')
 test_data = get_data(args, dataset, 'test')

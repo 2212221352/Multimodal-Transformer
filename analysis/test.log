@@ -1,0 +1,59 @@
+valid_partial_mode: 0
+Start loading the data....
+dataset: mosei
+data_path: /home/pc/aibot/BAS/data/multimodal/data_bert/mosei
+use_aoa: 1
+n layrers: 6
+num_head: 8
+num_epochs: 40
+  - Found cached train data
+  - Found cached valid data
+  - Found cached test data
+Finish loading the data....
+### Note: You are running in unaligned mode.
+768 74 35
+Epoch  1 | Batch  30/1020 | Time/Batch(ms) 470.16 | Train Loss 0.9235
+Epoch  1 | Batch  60/1020 | Time/Batch(ms) 381.15 | Train Loss 0.8396
+Epoch  1 | Batch  90/1020 | Time/Batch(ms) 400.17 | Train Loss 0.9734
+Epoch  1 | Batch 120/1020 | Time/Batch(ms) 417.38 | Train Loss 0.7855
+Epoch  1 | Batch 150/1020 | Time/Batch(ms) 419.53 | Train Loss 0.7488
+Epoch  1 | Batch 180/1020 | Time/Batch(ms) 426.60 | Train Loss 0.7537
+Epoch  1 | Batch 210/1020 | Time/Batch(ms) 467.68 | Train Loss 0.7673
+Epoch  1 | Batch 240/1020 | Time/Batch(ms) 451.97 | Train Loss 0.7116
+Epoch  1 | Batch 270/1020 | Time/Batch(ms) 463.17 | Train Loss 0.7426
+Epoch  1 | Batch 300/1020 | Time/Batch(ms) 473.57 | Train Loss 0.7518
+Epoch  1 | Batch 330/1020 | Time/Batch(ms) 448.75 | Train Loss 0.6894
+Epoch  1 | Batch 360/1020 | Time/Batch(ms) 429.15 | Train Loss 0.7182
+Epoch  1 | Batch 390/1020 | Time/Batch(ms) 419.36 | Train Loss 0.6851
+Epoch  1 | Batch 420/1020 | Time/Batch(ms) 411.43 | Train Loss 0.6680
+Epoch  1 | Batch 450/1020 | Time/Batch(ms) 421.91 | Train Loss 0.6384
+Epoch  1 | Batch 480/1020 | Time/Batch(ms) 404.80 | Train Loss 0.6618
+Epoch  1 | Batch 510/1020 | Time/Batch(ms) 411.01 | Train Loss 0.7604
+Epoch  1 | Batch 540/1020 | Time/Batch(ms) 414.65 | Train Loss 0.6617
+Epoch  1 | Batch 570/1020 | Time/Batch(ms) 421.51 | Train Loss 0.6229
+Epoch  1 | Batch 600/1020 | Time/Batch(ms) 432.95 | Train Loss 0.6570
+Epoch  1 | Batch 630/1020 | Time/Batch(ms) 402.40 | Train Loss 0.7211
+Epoch  1 | Batch 660/1020 | Time/Batch(ms) 423.42 | Train Loss 0.6538
+Epoch  1 | Batch 690/1020 | Time/Batch(ms) 418.99 | Train Loss 0.7039
+Epoch  1 | Batch 720/1020 | Time/Batch(ms) 412.73 | Train Loss 0.6746
+Epoch  1 | Batch 750/1020 | Time/Batch(ms) 405.46 | Train Loss 0.6595
+Epoch  1 | Batch 780/1020 | Time/Batch(ms) 419.26 | Train Loss 0.6330
+Epoch  1 | Batch 810/1020 | Time/Batch(ms) 419.64 | Train Loss 0.6349
+Epoch  1 | Batch 840/1020 | Time/Batch(ms) 445.85 | Train Loss 0.6521
+Epoch  1 | Batch 870/1020 | Time/Batch(ms) 427.42 | Train Loss 0.7023
+Epoch  1 | Batch 900/1020 | Time/Batch(ms) 413.39 | Train Loss 0.6262
+Epoch  1 | Batch 930/1020 | Time/Batch(ms) 415.81 | Train Loss 0.6422
+Epoch  1 | Batch 960/1020 | Time/Batch(ms) 422.76 | Train Loss 0.6254
+Epoch  1 | Batch 990/1020 | Time/Batch(ms) 433.96 | Train Loss 0.6039
+Epoch  1 | Batch 1020/1020 | Time/Batch(ms) 449.36 | Train Loss 0.6583
+--------------------------------------------------
+Epoch  1 | Time 501.6803 sec | Valid Loss 0.6041 | Test Loss 0.6330
+--------------------------------------------------
+Saved model at pre_trained_models/mult.pt!
+MAE:  0.63299143
+Correlation Coefficient:  0.7019713391762239
+mult_acc_7:  0.48358016741790083
+mult_acc_5:  0.49624382914788584
+F1 score:  0.7957710092802545
+Accuracy:  0.7991194276279582
+--------------------------------------------------
