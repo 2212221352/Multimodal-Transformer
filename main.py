@@ -51,7 +51,7 @@ parser.add_argument('--out_dropout', type=float, default=0.1,
                     help='output layer dropout')
 
 # Architecture
-parser.add_argument('--nlevels', type=int, default=4,
+parser.add_argument('--nlevels', type=int, default=6,
                     help='number of layers in the network (default: 5)')
 parser.add_argument('--num_heads', type=int, default=8,
                     help='number of heads for the transformer network (default: 5)')
@@ -67,7 +67,7 @@ parser.add_argument('--lr', type=float, default=1e-3,
                     help='initial learning rate (default: 1e-3)')
 parser.add_argument('--optim', type=str, default='Adam',
                     help='optimizer to use (default: Adam)')
-parser.add_argument('--num_epochs', type=int, default=120,
+parser.add_argument('--num_epochs', type=int, default=40,
                     help='number of epochs (default: 40)')
 parser.add_argument('--when', type=int, default=20,
                     help='when to decay learning rate (default: 20)')
