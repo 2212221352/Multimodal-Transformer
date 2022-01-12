@@ -6,6 +6,33 @@ import sys
 
 # Code adapted from the fairseq repo.
 
+class MLP(nn.Module):
+        def __init__(self, input_size, common_size):
+            super(MLP, self).__init__()
+            self.linear = nn.Sequential(
+                nn.Linear(input_size, input_size // 2),
+                nn.ReLU(inplace=True),
+                nn.Linear(input_size // 2, input_size // 2),
+                nn.ReLU(inplace=True),
+                nn.Linear(input_size // 2, common_size)
+            )
+ 
+        def forward(self, x):
+            out = self.linear(x)
+            return out
+
+class FFN(nn.Module):
+    def __init__(self, HIDDEN_SIZE):
+        super(FFN, self).__init__()
+
+        self.mlp = MLP(
+            input_size=HIDDEN_SIZE,
+            common_size=HIDDEN_SIZE
+        )
+
+    def forward(self, x):
+        return self.mlp(x)
+
 class MultiheadAttention(nn.Module):
     """Multi-headed attention.
     See "Attention Is All You Need" for more details.
@@ -39,6 +66,9 @@ class MultiheadAttention(nn.Module):
         self.use_aoa = aoa
         if self.use_aoa:
             self.aoa_layer =  nn.Sequential(nn.Linear((1 + 1) * embed_dim, 2 * embed_dim), nn.GLU())
+            self.ffn = FFN( embed_dim)
+            self.dropout2 = nn.Dropout(0.1)
+            self.norm2 = nn.LayerNorm(embed_dim)
             # dropout to the input of AoA layer
             if dropout_aoa > 0:
                 self.dropout_aoa = nn.Dropout(p=0.3)
@@ -143,8 +173,9 @@ class MultiheadAttention(nn.Module):
             q1 = query.transpose(0,1)
             a1 = attn.transpose(0,1)
             attn2 = self.aoa_layer(self.dropout_aoa(torch.cat([a1, q1], -1)))
+            x = self.norm2(attn2 + self.dropout2(
+            self.ffn(attn2)))
             attn = attn2.transpose(0,1)
-            
         attn = self.out_proj(attn)
 
         # average attention weights over heads
