@@ -12,7 +12,7 @@ class MULTModel(nn.Module):
         """
         super(MULTModel, self).__init__()
         self.orig_d_l, self.orig_d_a, self.orig_d_v = hyp_params.orig_d_l, hyp_params.orig_d_a, hyp_params.orig_d_v
-        self.d_l, self.d_a, self.d_v = 30, 30, 30
+        self.d_l, self.d_a, self.d_v = 40, 40, 40
         print(self.orig_d_l, self.orig_d_a, self.orig_d_v)
         self.vonly = hyp_params.vonly
         self.aonly = hyp_params.aonly
@@ -28,6 +28,7 @@ class MULTModel(nn.Module):
         self.embed_dropout = hyp_params.embed_dropout
         self.attn_mask = hyp_params.attn_mask
         self.aoa = hyp_params.aoa
+        self.inter = hyp_params.inter
 
         combined_dim = self.d_l + self.d_a + self.d_v
 
@@ -116,10 +117,10 @@ class MULTModel(nn.Module):
         proj_x_l = proj_x_l.permute(2, 0, 1)
 
         #---start:在此处加入模态内部的建模inter-Attention---
-        
-        proj_x_a = self.transformer_with_self_text(proj_x_l)
-        proj_x_v = self.transformer_with_self_vision(proj_x_v)
-        proj_x_l = self.transformer_with_self_audio(proj_x_a)
+        if self.inter:
+            proj_x_a = self.transformer_with_self_text(proj_x_l)
+            proj_x_v = self.transformer_with_self_vision(proj_x_v)
+            proj_x_l = self.transformer_with_self_audio(proj_x_a)
 
         #---end---
 
@@ -153,6 +154,9 @@ class MULTModel(nn.Module):
                 h_vs = h_vs[0]
             last_h_v = last_hs = h_vs[-1]
         
+
+        #这里是不是可以对融合方式做一些文章呢
+
         if self.partial_mode == 3:
             last_hs = torch.cat([last_h_l, last_h_a, last_h_v], dim=1)
         

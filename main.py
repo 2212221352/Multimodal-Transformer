@@ -31,6 +31,10 @@ parser.add_argument('--flag', type=int, default=1,
 parser.add_argument('--use_aoa', type=int, default=1,
                     help='1 aoa, 0 noAoa')
 
+parser.add_argument('--inter', type=int, default=1,
+                    help='1 inter, 0 nointer')
+
+
 
 
 # Dropouts
@@ -52,7 +56,7 @@ parser.add_argument('--out_dropout', type=float, default=0.1,
 # Architecture
 parser.add_argument('--nlevels', type=int, default=6,
                     help='number of layers in the network (default: 5)')
-parser.add_argument('--num_heads', type=int, default=10,
+parser.add_argument('--num_heads', type=int, default=8,
                     help='number of heads for the transformer network (default: 5)')
 parser.add_argument('--attn_mask', action='store_false',
                     help='use attention mask for Transformer (default: true)')
@@ -60,7 +64,7 @@ parser.add_argument('--attn_mask', action='store_false',
 # Tuning
 parser.add_argument('--batch_size', type=int, default=32, metavar='N',
                     help='batch size (default: 24)')
-parser.add_argument('--clip', type=float, default=1.0,
+parser.add_argument('--clip', type=float, default=0.8,
                     help='gradient clip value (default: 0.8)')
 parser.add_argument('--lr', type=float, default=1e-3,
                     help='initial learning rate (default: 1e-3)')
@@ -124,6 +128,7 @@ print("Start loading the data....")
 print("dataset:",args.dataset)
 print("data_path:",args.data_path)
 print("use_aoa:",args.use_aoa)
+print("use_inter:",args.inter)
 print("n layrers:",args.nlevels)
 print("num_head:",args.num_heads)
 print("num_epochs:",args.num_epochs)
@@ -153,6 +158,7 @@ hyp_params.layers = args.nlevels
 hyp_params.use_cuda = use_cuda
 hyp_params.dataset = dataset
 hyp_params.when = args.when
+hyp_params.inter = args.inter
 hyp_params.batch_chunk = args.batch_chunk
 hyp_params.aoa = args.use_aoa
 hyp_params.n_train, hyp_params.n_valid, hyp_params.n_test = len(train_data), len(valid_data), len(test_data)

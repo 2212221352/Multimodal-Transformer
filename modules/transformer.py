@@ -192,10 +192,6 @@ class TransformerEncoderLayer_WithAoA(nn.Module):
         if self.aoa:
             #加入AOA
             x =  self.aoa_layer(self.dropout_aoa(torch.cat([x, residual], -1)))
-            
-            x = self.norm2(x + self.dropout2(
-                self.ffn(x)
-            )) 
 
         ####
         x = F.dropout(x, p=self.res_dropout, training=self.training)
