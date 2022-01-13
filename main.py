@@ -53,21 +53,21 @@ parser.add_argument('--out_dropout', type=float, default=0.1,
 # Architecture
 parser.add_argument('--nlevels', type=int, default=6,
                     help='number of layers in the network (default: 5)')
-parser.add_argument('--num_heads', type=int, default=8,
+parser.add_argument('--num_heads', type=int, default=10,
                     help='number of heads for the transformer network (default: 5)')
 parser.add_argument('--attn_mask', action='store_false',
                     help='use attention mask for Transformer (default: true)')
 
 # Tuning
-parser.add_argument('--batch_size', type=int, default=16, metavar='N',
+parser.add_argument('--batch_size', type=int, default=32, metavar='N',
                     help='batch size (default: 24)')
-parser.add_argument('--clip', type=float, default=0.8,
+parser.add_argument('--clip', type=float, default=1.0,
                     help='gradient clip value (default: 0.8)')
 parser.add_argument('--lr', type=float, default=1e-3,
                     help='initial learning rate (default: 1e-3)')
 parser.add_argument('--optim', type=str, default='Adam',
                     help='optimizer to use (default: Adam)')
-parser.add_argument('--num_epochs', type=int, default=40,
+parser.add_argument('--num_epochs', type=int, default=50,
                     help='number of epochs (default: 40)')
 parser.add_argument('--when', type=int, default=20,
                     help='when to decay learning rate (default: 20)')

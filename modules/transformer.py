@@ -95,6 +95,33 @@ class TransformerEncoder(nn.Module):
             return self.max_source_positions
         return min(self.max_source_positions, self.embed_positions.max_positions())
 
+class MLP(nn.Module):
+        def __init__(self, input_size, common_size):
+            super(MLP, self).__init__()
+            self.linear = nn.Sequential(
+                nn.Linear(input_size, input_size // 2),
+                nn.ReLU(inplace=True),
+                nn.Linear(input_size // 2, input_size // 2),
+                nn.ReLU(inplace=True),
+                nn.Linear(input_size // 2, common_size)
+            )
+ 
+        def forward(self, x):
+            out = self.linear(x)
+            return out
+
+class FFN(nn.Module):
+    def __init__(self, HIDDEN_SIZE):
+        super(FFN, self).__init__()
+
+        self.mlp = MLP(
+            input_size=HIDDEN_SIZE,
+            common_size=HIDDEN_SIZE
+        )
+
+    def forward(self, x):
+        return self.mlp(x)
+
 
 class TransformerEncoderLayer_WithAoA(nn.Module):
     """Encoder layer block.
@@ -119,8 +146,18 @@ class TransformerEncoderLayer_WithAoA(nn.Module):
             embed_dim=self.embed_dim,
             num_heads=self.num_heads,
             attn_dropout=attn_dropout,
-            aoa = aoa
         )
+
+        scale = 1
+        d_model = embed_dim 
+        self.aoa = aoa
+
+        self.aoa_layer =  nn.Sequential(nn.Linear((1 + scale) * d_model, 2 * d_model), nn.GLU())
+
+        self.ffn = FFN( d_model)
+        self.dropout2 = nn.Dropout(0.1)
+        self.norm2 = LayerNorm(d_model)
+        self.dropout_aoa = nn.Dropout(0.1)
         self.attn_mask = attn_mask
 
         self.relu_dropout = relu_dropout
@@ -151,9 +188,21 @@ class TransformerEncoderLayer_WithAoA(nn.Module):
             x_k = self.maybe_layer_norm(0, x_k, before=True)
             x_v = self.maybe_layer_norm(0, x_v, before=True) 
             x, _ = self.self_attn(query=x, key=x_k, value=x_v, attn_mask=mask)
+
+        if self.aoa:
+            #加入AOA
+            x =  self.aoa_layer(self.dropout_aoa(torch.cat([x, residual], -1)))
+            
+            x = self.norm2(x + self.dropout2(
+                self.ffn(x)
+            )) 
+
+        ####
         x = F.dropout(x, p=self.res_dropout, training=self.training)
         x = residual + x
         x = self.maybe_layer_norm(0, x, after=True)
+
+        
 
         residual = x
     
