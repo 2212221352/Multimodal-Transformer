@@ -15,7 +15,7 @@ rcParams['font.family'] = 'sans-serif'
 rcParams['font.sans-serif'] = 'SimSun,Times New Roman'
 
 ##读取log文件
-logFile = r'/home/pc/aibot/BAS/my_code/Multimodal-Transformer/log2/bert_mosei_unalign_Aoa_interAttention.log' 
+logFile = r'./test.log' 
 text = ''
 file = open(logFile)
 train_loss = []
@@ -37,8 +37,8 @@ for loss in train_loss_list:
     acc_float = float(t[-1].strip())
     data.append(round(acc_float,5))
 else:
-    for i in range(0, len(data),34):
-        average_data.append(round(sum(data[i:i+34]) / 34, 4))
+    for i in range(0, len(data),17):
+        average_data.append(round(sum(data[i:i+17]) / 17, 4))
     all_data.append(average_data[::])
     average_data.clear()
     data.clear()
