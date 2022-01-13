@@ -23,8 +23,7 @@ parser.add_argument('--aligned', action='store_true',
                     help='consider aligned experiment or not (default: False)')
 parser.add_argument('--dataset', type=str, default='mosei',
                     help='dataset to use (default: mosei_senti)')
-parser.add_argument('--data_path', type=str, default='/home/pc/aibot/BAS/data/multimodal/data_bert/mosei',
-                    help='path for storing the dataset')
+parser.add_argument('--data_path', type=str, default='/home/pc/disk_2T/pc/jupyter/BAS/data/multimodal/data_bert/mosei',help='path for storing the dataset')
 
 parser.add_argument('--flag', type=int, default=1,
                     help='0 transformer, 1 bert')
@@ -59,7 +58,7 @@ parser.add_argument('--attn_mask', action='store_false',
                     help='use attention mask for Transformer (default: true)')
 
 # Tuning
-parser.add_argument('--batch_size', type=int, default=16, metavar='N',
+parser.add_argument('--batch_size', type=int, default=32, metavar='N',
                     help='batch size (default: 24)')
 parser.add_argument('--clip', type=float, default=0.8,
                     help='gradient clip value (default: 0.8)')
@@ -67,7 +66,7 @@ parser.add_argument('--lr', type=float, default=1e-3,
                     help='initial learning rate (default: 1e-3)')
 parser.add_argument('--optim', type=str, default='Adam',
                     help='optimizer to use (default: Adam)')
-parser.add_argument('--num_epochs', type=int, default=40,
+parser.add_argument('--num_epochs', type=int, default=50,
                     help='number of epochs (default: 40)')
 parser.add_argument('--when', type=int, default=20,
                     help='when to decay learning rate (default: 20)')
